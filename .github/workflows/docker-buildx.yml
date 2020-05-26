@@ -57,7 +57,7 @@ jobs:
       -
         name: Run Buildx
         run: |
-          docker buildx bake \
+          docker buildx build \
             --set ${{ github.event.repository.name }}.platform=${{ steps.prepare.outputs.docker_platforms }} \
             --set ${{ github.event.repository.name }}.output=type=image,push=true \
             --set ${{ github.event.repository.name }}.tags="${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }}"

@@ -62,3 +62,4 @@ jobs:
           --set ${{ github.event.repository.name }}.output=type=image,push=true \
           --set ${{ github.event.repository.name }}.tags="${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }}" \
           --file Dockerfile.smb
+
